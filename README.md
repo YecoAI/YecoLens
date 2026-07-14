@@ -4,12 +4,12 @@
 
 **X-ray vision for your LLM.** Watch every token's confidence, hunt entropy spikes, and fork reality mid-generation.
 
-[![npm version](https://img.shields.io/npm/v/@yeco-ai/yeco-lens.svg)](https://www.npmjs.com/package/@yeco-ai/yeco-lens)
-[![pypi version](https://img.shields.io/pypi/v/yeco-lens.svg)](https://pypi.org/project/yeco-lens/)
+[![npm version](https://img.shields.io/npm/v/@yeco-ai/yeco-lens.svg)](https://www.npmjs.com/package/@yeco-ai/YecoLens)
+[![pypi version](https://img.shields.io/pypi/v/yeco-lens.svg)](https://pypi.org/project/YecoLens/)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![ci](https://github.com/YecoAI/yeco-lens/actions/workflows/ci.yml/badge.svg)](https://github.com/YecoAI/yeco-lens/actions/workflows/ci.yml)
+[![ci](https://github.com/YecoAI/yeco-lens/actions/workflows/ci.yml/badge.svg)](https://github.com/YecoAI/YecoLens/actions/workflows/ci.yml)
 [![node](https://img.shields.io/badge/node-%3E%3D18-green.svg)](https://nodejs.org)
-[![stars](https://img.shields.io/github/stars/YecoAI/yeco-lens?style=social)](https://github.com/YecoAI/yeco-lens)
+[![stars](https://img.shields.io/github/stars/YecoAI/yeco-lens?style=social)](https://github.com/YecoAI/YecoLens)
 
 </div>
 
@@ -230,7 +230,7 @@ Full report: [`benchmark/BENCHMARK_REPORT.md`](./benchmark/BENCHMARK_REPORT.md)
 - [ ] vLLM provider
 - [ ] SDK auto-start of the dashboard
 
-See [open issues](https://github.com/YecoAI/yeco-lens/issues) and look for `good first issue` labels.
+See [open issues](https://github.com/YecoAI/YecoLens/issues) and look for `good first issue` labels.
 
 ## 🤝 Contributing
 
