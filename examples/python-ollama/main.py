@@ -5,7 +5,7 @@ Example: instrument a local Ollama chat call with Yeco-Lens.
        ollama run qwen2.5
 
 2. Start the dashboard:
-       npx yeco-lens
+       npx @yecoai-org/yeco-lens
 
 3. Install + run this example:
        pip install yeco-lens ollama

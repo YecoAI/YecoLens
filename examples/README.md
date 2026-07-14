@@ -2,7 +2,7 @@
 
 | Example | What it shows |
 |---|---|
-| [`standalone`](./standalone/README.md) | Zero-code: `npx yeco-lens` + your Ollama/OpenAI model. |
+| [`standalone`](./standalone/README.md) | Zero-code: `npx @yecoai-org/yeco-lens` + your Ollama/OpenAI model. |
 | [`python-auto`](./python-auto/main.py) | **Simplest SDK:** add ONE line, change nothing else. |
 | [`python-openai`](./python-openai/main.py) | Instrument an OpenAI streaming call in 3 lines (explicit API). |
 | [`python-ollama`](./python-ollama/main.py) | Instrument a local Ollama generation. |
@@ -11,7 +11,7 @@
 
 ```bash
 # 1. Start the dashboard in one terminal
-npx yeco-lens
+npx @yecoai-org/yeco-lens
 
 # 2. Run the example in another
 cd python-auto      # or python-openai / python-ollama

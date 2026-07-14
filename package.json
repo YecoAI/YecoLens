@@ -1,6 +1,6 @@
 {
   "name": "yeco-lens",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "private": true,
   "description": "X-ray vision for your LLM. Watch every token's confidence, hunt entropy spikes, and fork reality mid-generation.",
   "license": "MIT",
@@ -24,7 +24,7 @@
   ],
   "scripts": {
     "build": "npm run build --workspaces --if-present",
-    "dev": "npm run dev --workspace @yeco-ai/dashboard",
+    "dev": "npm run dev --workspace @yecoai-org/dashboard",
     "test": "vitest run",
     "test:watch": "vitest",
     "lint": "tsc --noEmit",

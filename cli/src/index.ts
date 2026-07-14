@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-import { createServer } from "@yeco-ai/server";
-import { listOllamaModels } from "@yeco-ai/server";
-import { loadConfig } from "@yeco-ai/server";
+import { createServer } from "@yecoai-org/server";
+import { listOllamaModels } from "@yecoai-org/server";
+import { loadConfig } from "@yecoai-org/server";
 
 const BANNER = `
   ██    ██  █████  ██      ██    ██ ███████     ██╗     ██████╗ ██╗  ██╗██╗   ██╗███████╗███████╗
@@ -9,7 +9,7 @@ const BANNER = `
   ██    ██ ███████ ██      ██    ██ █████       ██║     ██████╔╝ ╚███╔╝ ██║   ██║███████╗███████╗
    ██  ██  ██   ██ ██      ██    ██ ██          ██║     ██╔══██╗ ██╔██╗ ██║   ██║╚════██║╚════██║
     ████   ██   ██ ███████  ██████  ███████     ███████╗██████╔╝██╔╝ ██╗╚██████╔╝███████║███████║
-                                                                 v1.0.0
+                                                                 v1.0.3
 `;
 
 function openBrowser(url: string): void {

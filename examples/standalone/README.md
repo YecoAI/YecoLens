@@ -1,6 +1,6 @@
 # Standalone Explorer
 
-No code required. Yeco-Lens can drive itself — `npx yeco-lens` boots a local
+No code required. Yeco-Lens can drive itself — `npx @yecoai-org/yeco-lens` boots a local
 dashboard that talks directly to your Ollama or OpenAI models.
 
 ## Quick start
@@ -8,11 +8,11 @@ dashboard that talks directly to your Ollama or OpenAI models.
 ```bash
 # If you have Ollama running locally with a model pulled:
 ollama run qwen2.5      # in one terminal
-npx yeco-lens           # in another
+npx @yecoai-org/yeco-lens           # in another
 
 # Or with OpenAI:
 export OPENAI_API_KEY=sk-...
-npx yeco-lens
+npx @yecoai-org/yeco-lens
 ```
 
 Then open the printed URL (or it opens automatically), pick a model, type a

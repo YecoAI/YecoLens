@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { TokenStep } from "@yeco-ai/protocol";
+import type { TokenStep } from "@yecoai-org/protocol";
 
 interface Props {
   step: TokenStep;

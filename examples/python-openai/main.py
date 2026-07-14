@@ -2,7 +2,7 @@
 Example: instrument an OpenAI chat call with Yeco-Lens.
 
 1. In one terminal, start the dashboard:
-       npx yeco-lens
+       npx @yecoai-org/yeco-lens
 
 2. In another terminal, set your key and run this file:
        export OPENAI_API_KEY=sk-...

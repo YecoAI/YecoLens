@@ -69,7 +69,7 @@ with yeco.trace(model="gpt-4o-mini", system_prompt="Be concise."):
         print(chunk.token, end="", flush=True)
 ```
 
-Start the dashboard first (`npx yeco-lens`) in another terminal, then run your
+Start the dashboard first (`npx @yecoai-org/yeco-lens`) in another terminal, then run your
 script. Both your stdout and the dashboard receive the same live stream.
 
 ## API

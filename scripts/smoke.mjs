@@ -1,5 +1,5 @@
 // Final end-to-end smoke test: boots the built server and verifies every
-// surface a real `npx yeco-lens` user would touch.
+// surface a real `npx @yecoai-org/yeco-lens` user would touch.
 import { createServer } from "../server/dist/index.js";
 import { writeFileSync } from "node:fs";
 

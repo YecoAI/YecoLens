@@ -1,4 +1,4 @@
-import type { ClientMessage, ServerMessage } from "@yeco-ai/protocol";
+import type { ClientMessage, ServerMessage } from "@yecoai-org/protocol";
 
 export type ServerMessageHandler = (msg: ServerMessage) => void;
 

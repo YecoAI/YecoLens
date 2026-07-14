@@ -6,7 +6,7 @@ intercepted — logprobs are turned on and every token streams to the dashboard.
 Nothing else changes.
 
 1. Start the dashboard in one terminal:
-       npx yeco-lens
+       npx @yecoai-org/yeco-lens
 
 2. Set your key and run this file:
        export OPENAI_API_KEY=sk-...

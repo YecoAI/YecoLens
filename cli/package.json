@@ -1,7 +1,7 @@
 {
-  "name": "@yeco-ai/yeco-lens",
-  "version": "1.0.0",
-  "description": "Yeco-Lens CLI — `npx yeco-lens` boots the X-ray dashboard for your LLM.",
+  "name": "@yecoai-org/yeco-lens",
+  "version": "1.0.3",
+  "description": "Yeco-Lens CLI — `npx @yecoai-org/yeco-lens` boots the X-ray dashboard for your LLM.",
   "license": "MIT",
   "author": "YecoAI <hello@yeco.ai>",
   "homepage": "https://github.com/YecoAI/yeco-lens",
@@ -27,7 +27,9 @@
   "bin": {
     "yeco-lens": "./dist/index.js"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "dev": "tsc -p tsconfig.json --watch",
@@ -35,8 +37,8 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@yeco-ai/server": "*",
-    "@yeco-ai/protocol": "*"
+    "@yecoai-org/server": "*",
+    "@yecoai-org/protocol": "*"
   },
   "devDependencies": {
     "typescript": "^5.6.3",

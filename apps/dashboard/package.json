@@ -1,6 +1,6 @@
 {
-  "name": "@yeco-ai/dashboard",
-  "version": "1.0.0",
+  "name": "@yecoai-org/dashboard",
+  "version": "1.0.3",
   "private": true,
   "description": "Yeco-Lens dashboard — Terminal DevTools UI for LLM token inspection.",
   "license": "MIT",
@@ -13,7 +13,7 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@yeco-ai/protocol": "*",
+    "@yecoai-org/protocol": "*",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "zustand": "^5.0.1"

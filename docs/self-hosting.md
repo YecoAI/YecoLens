@@ -6,7 +6,7 @@ environment just as easily.
 ## Quick local run
 
 ```bash
-npx yeco-lens
+npx @yecoai-org/yeco-lens
 ```
 
 That's it. The server binds `127.0.0.1:7531` and opens the dashboard in your
@@ -41,9 +41,9 @@ All settings come from environment variables (no config file needed):
 ### CLI flags
 
 ```bash
-npx yeco-lens --no-browser      # don't open a browser
-npx yeco-lens -n                # shorthand
-npx yeco-lens --port=8080       # custom port
+npx @yecoai-org/yeco-lens --no-browser      # don't open a browser
+npx @yecoai-org/yeco-lens -n                # shorthand
+npx @yecoai-org/yeco-lens --port=8080       # custom port
 ```
 
 ## Endpoints
@@ -51,7 +51,7 @@ npx yeco-lens --port=8080       # custom port
 | Endpoint | Method | Purpose |
 |---|---|---|
 | `/` | GET | Dashboard SPA (static) |
-| `/healthz` | GET | Liveness probe → `{"ok":true,"version":"1.0.0"}` |
+| `/healthz` | GET | Liveness probe → `{"ok":true,"version":"1.0.3"}` |
 | `/api/status` | GET | Server + provider status JSON |
 | `/ws` | WS | The Yeco-Lens wire protocol (see `docs/protocol.md`) |
 
@@ -60,7 +60,7 @@ npx yeco-lens --port=8080       # custom port
 To share one Yeco-Lens instance across a LAN:
 
 ```bash
-YECO_LENS_HOST=0.0.0.0 npx yeco-lens --no-browser
+YECO_LENS_HOST=0.0.0.0 npx @yecoai-org/yeco-lens --no-browser
 ```
 
 Then anyone on the network opens `http://<your-ip>:7531`. Note: Yeco-Lens has
@@ -70,7 +70,7 @@ on the roadmap.
 ## Using a remote Ollama
 
 ```bash
-OLLAMA_URL=http://gpu-box:11434 npx yeco-lens
+OLLAMA_URL=http://gpu-box:11434 npx @yecoai-org/yeco-lens
 ```
 
 ## Using Azure OpenAI
@@ -78,7 +78,7 @@ OLLAMA_URL=http://gpu-box:11434 npx yeco-lens
 ```bash
 OPENAI_API_KEY=<your-key> \
 OPENAI_BASE_URL=https://<your-resource>.openai.azure.com \
-npx yeco-lens
+npx @yecoai-org/yeco-lens
 ```
 
 ## Running as a service

@@ -9,7 +9,7 @@ import { TraceList } from "./components/TraceList";
 import { StatusBar } from "./components/StatusBar";
 import { ChatComposer } from "./components/ChatComposer";
 import { OnboardingScreen } from "./components/OnboardingScreen";
-import type { ChatMessage, ClientMessage } from "@yeco-ai/protocol";
+import type { ChatMessage, ClientMessage } from "@yecoai-org/protocol";
 
 export function App() {
   const wsRef = useRef<YecoWSClient | null>(null);

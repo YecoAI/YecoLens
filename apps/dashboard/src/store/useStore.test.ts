@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach } from "vitest";
 import { useStore } from "./useStore";
-import type { ServerMessage, TokenStep } from "@yeco-ai/protocol";
+import type { ServerMessage, TokenStep } from "@yecoai-org/protocol";
 
 function step(index: number, token: string, entropy = 0.1, probability = 0.9): TokenStep {
   return {
@@ -37,7 +37,7 @@ describe("dashboard store", () => {
         ollamaReachable: true,
         ollamaUrl: "http://x:11434",
         openaiConfigured: false,
-        version: "1.0.0",
+        version: "1.0.3",
       },
     });
     expect(useStore.getState().connected).toBe(true);

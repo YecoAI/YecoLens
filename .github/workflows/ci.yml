@@ -20,7 +20,7 @@ jobs:
       - name: Lint
         run: npm run lint
       - name: Build protocol (dep of others)
-        run: npm run build --workspace @yeco-ai/protocol
+        run: npm run build --workspace @yecoai-org/protocol
       - name: Test
         run: npm test
       - name: Build all

@@ -1,4 +1,4 @@
-import type { ChatMessage, ModelInfo } from "@yeco-ai/protocol";
+import type { ChatMessage, ModelInfo } from "@yecoai-org/protocol";
 import { normalizeBaseUrl } from "../provider-config.js";
 
 interface OpenAILogprobContent {

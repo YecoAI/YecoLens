@@ -21,10 +21,10 @@ jobs:
       - run: npm install --include=dev
       - name: Build all workspaces
         run: |
-          npm run build --workspace @yeco-ai/protocol
-          npm run build --workspace @yeco-ai/server
-          npm run build --workspace @yeco-ai/dashboard
-          npm run build --workspace @yeco-ai/yeco-lens
+          npm run build --workspace @yecoai-org/protocol
+          npm run build --workspace @yecoai-org/server
+          npm run build --workspace @yecoai-org/dashboard
+          npm run build --workspace @yecoai-org/yeco-lens
       - name: Publish protocol
         run: npm publish --access public --provenance
         env:

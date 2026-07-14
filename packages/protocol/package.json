@@ -1,6 +1,6 @@
 {
-  "name": "@yeco-ai/protocol",
-  "version": "1.0.0",
+  "name": "@yecoai-org/protocol",
+  "version": "1.0.3",
   "description": "Shared wire protocol types for Yeco-Lens.",
   "license": "MIT",
   "author": "YecoAI",
@@ -13,7 +13,10 @@
       "import": "./dist/index.js"
     }
   },
-  "files": ["dist", "README.md"],
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "test": "vitest run"

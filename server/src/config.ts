@@ -25,7 +25,7 @@ function envBool(name: string, fallback: boolean): boolean {
 }
 
 export function loadConfig(overrides: Partial<ServerConfig> = {}): ServerConfig {
-  const pkgVersion = "1.0.0";
+  const pkgVersion = "1.0.3";
   return {
     port: envInt("YECO_LENS_PORT", overrides.port ?? 7531),
     host: process.env.YECO_LENS_HOST ?? overrides.host ?? "127.0.0.1",

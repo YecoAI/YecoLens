@@ -1,4 +1,4 @@
-import type { ChatMessage, ModelInfo } from "@yeco-ai/protocol";
+import type { ChatMessage, ModelInfo } from "@yecoai-org/protocol";
 
 interface OllamaChatChunk {
   model: string;

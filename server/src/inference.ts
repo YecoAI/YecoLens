@@ -4,7 +4,7 @@ import {
   assembleText,
   type ChatMessage,
   type TokenStep,
-} from "@yeco-ai/protocol";
+} from "@yecoai-org/protocol";
 import { streamOllamaChat } from "./providers/ollama.js";
 import { streamOpenAIChat } from "./providers/openai.js";
 import { getProviderConfig } from "./provider-config.js";

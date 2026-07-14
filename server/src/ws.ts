@@ -7,7 +7,7 @@ import {
   type ClientMessage,
   type ServerStatus,
   type ModelInfo,
-} from "@yeco-ai/protocol";
+} from "@yecoai-org/protocol";
 import type { TraceStore, TraceStoreEvent } from "./trace-store.js";
 import type { InferenceEngine } from "./inference.js";
 import type { ServerConfig } from "./config.js";
@@ -148,7 +148,7 @@ export class WSHub {
     this.handleClient(ws, msg as ClientMessage);
   }
 
-  private handleClient(ws: WebSocket, msg: ClientMessage): void {
+  private handleClient(_ws: WebSocket, msg: ClientMessage): void {
     switch (msg.type) {
       case "generate": {
         this.deps.engine.start({

@@ -11,7 +11,7 @@ body:
     attributes:
       label: What happened?
       description: A clear description of the unexpected behavior.
-      placeholder: "When I ran `npx yeco-lens` and sent a prompt, the waterfall stayed empty."
+      placeholder: "When I ran `npx @yecoai-org/yeco-lens` and sent a prompt, the waterfall stayed empty."
     validations:
       required: true
   - type: textarea
@@ -21,7 +21,7 @@ body:
       description: Minimal repro. Code snippets or a command sequence are ideal.
       placeholder: |
         1. `ollama run qwen2.5`
-        2. `npx yeco-lens`
+        2. `npx @yecoai-org/yeco-lens`
         3. Type "Capital of Italy?" and hit Run
         4. ...
     validations:
@@ -37,7 +37,7 @@ body:
     attributes:
       label: Usage mode
       options:
-        - Standalone Explorer (`npx yeco-lens`)
+        - Standalone Explorer (`npx @yecoai-org/yeco-lens`)
         - Python SDK (`pip install yeco-lens`)
         - Both / not sure
     validations:
@@ -64,7 +64,7 @@ body:
         OS: macOS 14 / Windows 11 / Ubuntu 24.04
         Node: 20.x
         Python: 3.12
-        Yeco-Lens: 1.0.0
+        Yeco-Lens: 1.0.3
     validations:
       required: true
   - type: textarea

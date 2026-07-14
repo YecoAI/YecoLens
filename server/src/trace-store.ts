@@ -1,4 +1,4 @@
-import type { Trace, TokenStep, ChatMessage } from "@yeco-ai/protocol";
+import type { Trace, TokenStep, ChatMessage } from "@yecoai-org/protocol";
 
 export type TraceListener = (event: TraceStoreEvent) => void;
 

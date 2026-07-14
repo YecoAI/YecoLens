@@ -4,7 +4,7 @@ import { TraceStore } from "./trace-store.js";
 import { InferenceEngine } from "./inference.js";
 import { loadConfig } from "./config.js";
 import { initProviderConfig } from "./provider-config.js";
-import type { ServerMessage } from "@yeco-ai/protocol";
+import type { ServerMessage } from "@yecoai-org/protocol";
 
 class FakeWS {
   readyState = 1;

@@ -5,7 +5,7 @@ import type {
   ServerMessage,
   ServerStatus,
   TokenStep,
-} from "@yeco-ai/protocol";
+} from "@yecoai-org/protocol";
 
 export interface TraceState {
   id: string;

@@ -9,7 +9,7 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { createServer, type YecoLensServer } from "./index.js";
 import { initProviderConfig } from "./provider-config.js";
-import type { ServerMessage, WireMessage } from "@yeco-ai/protocol";
+import type { ServerMessage, WireMessage } from "@yecoai-org/protocol";
 import WebSocket from "ws";
 
 /* ------------------------------------------------------------------ */

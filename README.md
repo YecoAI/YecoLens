@@ -4,12 +4,12 @@
 
 **X-ray vision for your LLM.** Watch every token's confidence, hunt entropy spikes, and fork reality mid-generation.
 
-[![npm version](https://img.shields.io/npm/v/@yeco-ai/yeco-lens.svg)](https://www.npmjs.com/package/@yeco-ai/YecoLens)
-[![pypi version](https://img.shields.io/pypi/v/yeco-lens.svg)](https://pypi.org/project/YecoLens/)
+[![npm version](https://img.shields.io/npm/v/@yecoai-org/yeco-lens.svg)](https://www.npmjs.com/package/@yecoai-org/yeco-lens)
+[![pypi version](https://img.shields.io/pypi/v/yeco-lens.svg)](https://pypi.org/project/yeco-lens/)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![ci](https://github.com/YecoAI/yeco-lens/actions/workflows/ci.yml/badge.svg)](https://github.com/YecoAI/YecoLens/actions/workflows/ci.yml)
+[![ci](https://github.com/YecoAI/yeco-lens/actions/workflows/ci.yml/badge.svg)](https://github.com/YecoAI/yeco-lens/actions/workflows/ci.yml)
 [![node](https://img.shields.io/badge/node-%3E%3D18-green.svg)](https://nodejs.org)
-[![stars](https://img.shields.io/github/stars/YecoAI/yeco-lens?style=social)](https://github.com/YecoAI/YecoLens)
+[![stars](https://img.shields.io/github/stars/YecoAI/yeco-lens?style=social)](https://github.com/YecoAI/yeco-lens)
 
 </div>
 
@@ -45,7 +45,7 @@ Everything is **100% real** — real logprobs from your real models. No simulati
 ### Standalone Explorer (zero code)
 
 ```bash
-npx yeco-lens
+npx @yecoai-org/yeco-lens
 ```
 
 Yeco-Lens auto-detects Ollama on `:11434` and lists your real local models. Pick one, type a prompt, watch the waterfall. If you have no Ollama and no OpenAI key, it shows a real onboarding screen — never fake data.
@@ -53,15 +53,15 @@ Yeco-Lens auto-detects Ollama on `:11434` and lists your real local models. Pick
 **With Ollama:**
 ```bash
 ollama run qwen2.5   # in one terminal
-npx yeco-lens        # in another
+npx @yecoai-org/yeco-lens        # in another
 ```
 
 **With OpenAI or any OpenAI-compatible API (Groq, Together, vLLM, LM Studio…):**
 ```bash
 export OPENAI_API_KEY=sk-...
-npx yeco-lens
+npx @yecoai-org/yeco-lens
 ```
-No key yet? Just run `npx yeco-lens` and paste a key + custom URL straight into
+No key yet? Just run `npx @yecoai-org/yeco-lens` and paste a key + custom URL straight into
 the onboarding screen — it connects **live, no restart**. Presets for common
 providers are one click away.
 
@@ -147,7 +147,7 @@ Yeco-Lens rebuilds the chat context — original messages + assistant prefix tru
                             └─ server drives real inference in standalone mode
 ```
 
-- **One protocol.** The TypeScript dashboard and the Python SDK speak the same JSON-over-WebSocket wire protocol (`@yeco-ai/protocol`). Both are first-class clients.
+- **One protocol.** The TypeScript dashboard and the Python SDK speak the same JSON-over-WebSocket wire protocol (`@yecoai-org/protocol`). Both are first-class clients.
 - **Real providers.** Ollama via native `/api/chat` (with `logprobs`+`top_logprobs`), OpenAI via `/v1/chat/completions`. Not the OpenAI-compat shim — [Ollama's doesn't expose logprobs yet](https://github.com/ollama/ollama/issues/16117).
 - **Local first.** Everything runs on `127.0.0.1`. Your prompts and keys never leave your machine.
 
@@ -158,13 +158,13 @@ Yeco-Lens rebuilds the chat context — original messages + assistant prefix tru
 | [`packages/protocol`](packages/protocol) | Shared wire-protocol types + entropy/fork logic (TS). |
 | [`server`](server) | Fastify + ws backend: providers, entropy, fork, WebSocket hub. |
 | [`apps/dashboard`](apps/dashboard) | Vite + React + TS Terminal DevTools UI. |
-| [`cli`](cli) | `@yeco-ai/yeco-lens` — the `npx` launcher. |
+| [`cli`](cli) | `@yecoai-org/yeco-lens` — the `npx` launcher. |
 | [`sdk/python`](sdk/python) | `pip install yeco-lens` — Python instrumentation SDK. |
 | [`examples`](examples) | OpenAI, Ollama, and standalone examples. |
 
 ## 🔧 Configuration
 
-All via environment variables (sane defaults — `npx yeco-lens` needs none):
+All via environment variables (sane defaults — `npx @yecoai-org/yeco-lens` needs none):
 
 | Variable | Default | Purpose |
 |---|---|---|
@@ -199,7 +199,7 @@ pytest
 - **Fork & Hot-Reload rebuilds context honestly.** No provider exposes a "resume a forward pass" API. Yeco-Lens truncates the assistant prefix at the fork point, injects the alternative token, and issues a *new* completion request. The model sees the same prompt up to that point, but re-generation is not guaranteed to produce identical output for the remaining tokens.
 - **Thread-safe per-thread traces only.** The Python SDK stores the active trace in `threading.local()`, so each OS thread gets its own trace. Async tasks that share a thread (e.g., asyncio coroutines) will share a trace — use separate threads or explicit `YecoLens.trace()` for concurrent async work.
 - **Provider support.** Ollama's OpenAI-compatible shim does not expose logprobs (see [ollama/ollama#16117](https://github.com/ollama/ollama/issues/16117)). Yeco-Lens uses Ollama's native `/api/chat` endpoint which does. OpenAI, Groq, Together, vLLM, LM Studio, and any OpenAI-compatible provider that returns `logprobs` in streaming chunks are supported.
-- **Wire protocol versioning.** The JSON-over-WebSocket protocol is at version 1. Breaking changes will bump `PROTOCOL_VERSION` in `@yeco-ai/protocol`. Dashboard and SDK versions should match.
+- **Wire protocol versioning.** The JSON-over-WebSocket protocol is at version 1. Breaking changes will bump `PROTOCOL_VERSION` in `@yecoai-org/protocol`. Dashboard and SDK versions should match.
 - **No persistent storage yet.** Traces are held in memory and lost when the server stops. SQLite history is on the roadmap.
 
 ## 📊 Benchmark & Metrics
@@ -230,7 +230,7 @@ Full report: [`benchmark/BENCHMARK_REPORT.md`](./benchmark/BENCHMARK_REPORT.md)
 - [ ] vLLM provider
 - [ ] SDK auto-start of the dashboard
 
-See [open issues](https://github.com/YecoAI/YecoLens/issues) and look for `good first issue` labels.
+See [open issues](https://github.com/YecoAI/yeco-lens/issues) and look for `good first issue` labels.
 
 ## 🤝 Contributing
 

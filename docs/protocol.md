@@ -10,7 +10,7 @@ are the source of truth.
 
 | Role | Who |
 |---|---|
-| **server** | The Yeco-Lens backend (`@yeco-ai/server`) |
+| **server** | The Yeco-Lens backend (`@yecoai-org/server`) |
 | **client** | Anything connecting to the server — the dashboard UI, or a Python/TS SDK |
 
 ```
