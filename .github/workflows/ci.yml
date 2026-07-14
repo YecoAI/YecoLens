@@ -17,8 +17,8 @@ jobs:
           node-version: "22"
           cache: "npm"
       - run: npm install --include=dev
-      - name: Build protocol (dep of others)
-        run: npm run build --workspace @yecoai-org/protocol
+      - name: Build dependencies (protocol + server)
+        run: npm run build --workspace @yecoai-org/protocol && npm run build --workspace @yecoai-org/server
       - name: Lint
         run: npm run lint
       - name: Test
