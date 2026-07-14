@@ -1,0 +1,43 @@
+name: ✨ Feature request
+description: Suggest a new feature or improvement
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Who feels the pain, and when?
+      placeholder: "When debugging a long agent chain, I can't tell which step derailed because I only see the final trace."
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: What would you like?
+      description: Describe the feature or behavior you want. Mockups or ASCII sketches welcome.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: What workarounds do you use today? Why aren't they enough?
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Dashboard UI
+        - Server / providers
+        - Python SDK
+        - Protocol
+        - CLI
+        - Docs / examples
+    validations:
+      required: true
+  - type: checkboxes
+    id: willing
+    attributes:
+      label: Willing to help build it?
+      options:
+        - label: I'd be open to submitting a PR for this.

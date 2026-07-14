@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test-typescript:
+    name: TypeScript (lint + test + build)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+      - run: npm install --include=dev
+      - name: Lint
+        run: npm run lint
+      - name: Build protocol (dep of others)
+        run: npm run build --workspace @yeco-ai/protocol
+      - name: Test
+        run: npm test
+      - name: Build all
+        run: npm run build
+
+  test-python:
+    name: Python (pytest)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install SDK
+        run: |
+          cd sdk/python
+          pip install -e ".[test]"
+      - name: Test
+        run: |
+          cd sdk/python
+          pytest -v

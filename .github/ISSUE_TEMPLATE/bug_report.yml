@@ -1,0 +1,75 @@
+name: 🐛 Bug report
+description: Something isn't working as expected
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug! The more detail you give, the faster we can fix it.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear description of the unexpected behavior.
+      placeholder: "When I ran `npx yeco-lens` and sent a prompt, the waterfall stayed empty."
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Minimal repro. Code snippets or a command sequence are ideal.
+      placeholder: |
+        1. `ollama run qwen2.5`
+        2. `npx yeco-lens`
+        3. Type "Capital of Italy?" and hit Run
+        4. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Usage mode
+      options:
+        - Standalone Explorer (`npx yeco-lens`)
+        - Python SDK (`pip install yeco-lens`)
+        - Both / not sure
+    validations:
+      required: true
+  - type: dropdown
+    id: provider
+    attributes:
+      label: Provider
+      options:
+        - Ollama
+        - OpenAI
+        - Other / N/A
+  - type: input
+    id: model
+    attributes:
+      label: Model
+      placeholder: "e.g. qwen2.5, gpt-4o-mini"
+  - type: textarea
+    id: env
+    attributes:
+      label: Environment
+      description: OS, Node version, Python version, Yeco-Lens version.
+      placeholder: |
+        OS: macOS 14 / Windows 11 / Ubuntu 24.04
+        Node: 20.x
+        Python: 3.12
+        Yeco-Lens: 1.0.0
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / server output
+      description: Anything printed to the terminal. Paste between triple backticks.
+      render: shell

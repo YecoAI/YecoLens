@@ -1,0 +1,38 @@
+{
+  "name": "yeco-lens",
+  "version": "1.0.0",
+  "private": true,
+  "description": "X-ray vision for your LLM. Watch every token's confidence, hunt entropy spikes, and fork reality mid-generation.",
+  "license": "MIT",
+  "author": "YecoAI <hello@yeco.ai>",
+  "homepage": "https://github.com/YecoAI/yeco-lens",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YecoAI/yeco-lens.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YecoAI/yeco-lens/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*",
+    "server",
+    "cli"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "dev": "npm run dev --workspace @yeco-ai/dashboard",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit",
+    "start": "node cli/dist/index.js",
+    "clean": "node scripts/clean.mjs"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.5"
+  }
+}

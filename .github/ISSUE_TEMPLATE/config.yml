@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Ask a question
+    url: https://github.com/YecoAI/yeco-lens/discussions
+    about: Usage questions and ideas → GitHub Discussions.
+  - name: 🔒 Report a security vulnerability
+    url: mailto:security@yeco.ai
+    about: Please email security issues privately instead of opening a public issue.
