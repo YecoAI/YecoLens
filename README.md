@@ -7,9 +7,8 @@
 [![npm version](https://img.shields.io/npm/v/@yecoai-org/yeco-lens.svg)](https://www.npmjs.com/package/@yecoai-org/yeco-lens)
 [![pypi version](https://img.shields.io/pypi/v/yeco-lens.svg)](https://pypi.org/project/yeco-lens/)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![ci](https://github.com/YecoAI/yeco-lens/actions/workflows/ci.yml/badge.svg)](https://github.com/YecoAI/yeco-lens/actions/workflows/ci.yml)
 [![node](https://img.shields.io/badge/node-%3E%3D18-green.svg)](https://nodejs.org)
-[![stars](https://img.shields.io/github/stars/YecoAI/yeco-lens?style=social)](https://github.com/YecoAI/yeco-lens)
+[![stars](https://img.shields.io/github/stars/YecoAI/yeco-lens?style=social)](https://github.com/YecoAI/YecoLens)
 
 </div>
 
